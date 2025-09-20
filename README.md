@@ -28,7 +28,6 @@ Google Cloud account with YouTube Data API v3 enabled 🌐
 
 client_secrets.json file from Google Cloud Console 🔑
 
-Note: You don’t need to manually install Python packages. Click the Install Dependencies button in the app ✅
 
 ## 🔑 Getting Your Client Secret
 
