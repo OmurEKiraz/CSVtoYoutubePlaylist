@@ -99,6 +99,9 @@ Adjust delays and batch size to manage YouTube quota limits ⏱️
 
 Failed entries are logged for review and easy retry 🔄
 
+The OAuth2 will expire if it didnt used for 5 to 7 days
+So when you get a weird terminal error saying token expired just delete the youtube_token.pickle file and re run 
+
 📜 License
 
 This project is licensed under the MIT License 📝
