@@ -4,8 +4,6 @@ YouTube Playlist CSV Importer is a Python desktop app with a simple GUI that let
 
 ## 🚀 Features
 
-Modern GUI with dark mode 🌑
-
 Enter YouTube Playlist ID directly 🎯
 
 Select Client Secret JSON and CSV file via file dialogs 📂
@@ -33,8 +31,7 @@ client_secrets.json file from Google Cloud Console 🔑
 
 To use this app, you need a client_secrets.json file from Google Cloud Console. Follow these steps:
 
-Go to Google Cloud Console
-.
+Go to Google Cloud Console.
 
 Create a new project or select an existing one.
 
@@ -58,9 +55,10 @@ Save this file as client_secrets.json somewhere accessible and use the Select Cl
 
 ## ⚙️ How to Use
 
-Open Terminal and type "pip install customtkinter" (first time only)
 
-Double Click the ui.pyw
+Double Click the ui.pyw file
+
+Click Install Dependencies (first time only)
 
 In the app window:
 
@@ -69,8 +67,6 @@ Enter your Playlist ID
 Click Select Client Secret and choose your client_secrets.json
 
 Click Select CSV File and choose your CSV
-
-Click Install Dependencies (first time only)
 
 Click Start Import ▶️
 
