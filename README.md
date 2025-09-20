@@ -1,107 +1,108 @@
-# 📄 CSV to Youube Playlist
+# 🎵 YouTube Playlist CSV Importer
 
-csvlistmaker.py is a Python utility that reads a CSV file containing tracks and artists, tracks existing videos in a YouTube playlist, and prepares the playlist for importing new songs. This tool is ideal for transferring playlists from Spotify or other sources to YouTube. 🎵➡️📺
-
-### CSV files from the [Spotify Playlist to CSV](https://github.com/OmurEKiraz/SpotifyPlaylistToCSV) exporter would work fine
+YouTube Playlist CSV Importer is a Python desktop app with a simple GUI that lets you import songs from a CSV file directly into a YouTube playlist. Perfect for transferring playlists from Spotify or other sources to YouTube! 📄➡️🎶➡️📺
 
 ## 🚀 Features
 
-Reads CSV files with Track Name and Artists columns 🎶
+Modern GUI with dark mode 🌑
 
-Tracks videos already present in the playlist to avoid duplicates ✅
+Enter YouTube Playlist ID directly 🎯
 
-Retries automatically if a video insertion fails 🔁
+Select Client Secret JSON and CSV file via file dialogs 📂
 
-Logs failed or skipped songs for review 📋
+Install dependencies directly from the app 🐍
 
-Supports batch processing and delays to comply with YouTube API limits ⏱️
+Start import with a single button ▶️
+
+Progress bar shows import progress in real time ⏱️
+
+Log panel displays successes, errors, and skipped songs 📋
+
+Remembers your last-used playlist, CSV, and client secret paths automatically 💾
 
 ## 🛠 Requirements
 
 Python 3.7+ 🐍
 
-Google Cloud Console account with YouTube Data API enabled 🌐
+Google Cloud account with YouTube Data API v3 enabled 🌐
 
 client_secrets.json file from Google Cloud Console 🔑
 
-Python packages: google-auth-oauthlib, google-api-python-client
+Note: You don’t need to manually install Python packages. Click the Install Dependencies button in the app ✅
 
-## ⚙️ Setup
+## 🔑 Getting Your Client Secret
 
-Enable YouTube Data API on Google Cloud:
+To use this app, you need a client_secrets.json file from Google Cloud Console. Follow these steps:
 
-Access Google Cloud Console
+Go to Google Cloud Console
+.
 
-Create a new project or use an existing one
+Create a new project or select an existing one.
 
-Enable YouTube Data API v3
+In the left menu, go to APIs & Services → Library.
 
-Create OAuth 2.0 Client IDs
+Search for YouTube Data API v3 and click Enable.
 
-Download client_secrets.json and place it in the same folder as csvlistmaker.py 📂
+Go to APIs & Services → Credentials.
 
-Install Python dependencies:
+Click Create Credentials → OAuth Client ID.
 
-Install google-auth-oauthlib and google-api-python-client using pip
+If prompted, configure the OAuth consent screen (choose External, fill in app name, email, etc., then save).
 
-Prepare CSV file:
+Choose Desktop app as the application type and give it a name.
 
-Name the CSV file my_playlists.csv (or another name, then update CSV_FILE in the script)
+Click Create, then Download JSON.
 
-Include the columns: Track Name, Artists
+Save this file as client_secrets.json somewhere accessible and use the Select Client Secret button in the app to load it.
 
-Configure the script:
+⚠️ Keep your client_secrets.json safe and do not share it publicly.
 
-Set PLAYLIST_ID to the target YouTube playlist ID 🎯
+## ⚙️ How to Use
 
-Optionally adjust caching, batch, and delay settings (CACHE_FILE, BATCH_SIZE, SEARCH_DELAY, INSERT_DELAY)
+Open Terminal and type "pip install customtkinter" (first time only)
 
-## ▶️ Usage
+Double Click the ui.pyw
 
-Run the script using Python.
+In the app window:
 
-On the first run:
+Enter your Playlist ID
 
-A browser window opens to authorize access to your Google account 🌐
+Click Select Client Secret and choose your client_secrets.json
 
-OAuth credentials are saved in youtube_token.pickle for future runs 🔒
+Click Select CSV File and choose your CSV
 
-The script performs the following:
+Click Install Dependencies (first time only)
 
-Reads all songs from the CSV
+Click Start Import ▶️
 
-Checks which videos already exist in the playlist (using cache) ✅
+During import:
 
-Searches YouTube and adds new videos ➕
+- Log panel shows each added song, skipped items, and errors 📋
 
-Logs any failed or skipped songs in failed_or_skipped.csv 📋
+After import:
 
-Saves remaining songs for subsequent runs in remaining_songs.pickle 💾
+- Remaining songs (if any) can be retried in the next run 🔄
 
-Because of the google APIs free quota limit you can add maximum of 60 to 70 songs in one run for free
+Failed or skipped songs are logged for review 📄
 
 ## 📂 CSV Format
 
 The CSV should have the following structure:
 
-Track Name | Artists
-Song Example 1 | Artist 1
-Song Example 2 | Artist 2
-
+Track Name,Artists
+Song Example 1,Artist 1
+Song Example 2,Artist 2
 
 ## 📌 Notes
 
-Works only for publicly searchable songs on YouTube 🔍
+Only publicly searchable songs on YouTube are added 🔍
 
-Cache avoids duplicates and reduces API calls 💾
+Respect YouTube API limits (~60–70 songs per run with free quota) ⏱️
 
-Adjust delays and batch size to manage YouTube quota limits ⏱️
+OAuth token expires if unused for 5–7 days; delete youtube_token.pickle if needed 🔄
 
-Failed entries are logged for review and easy retry 🔄
+App remembers your last-used playlist, CSV, and client secret paths automatically 💾
 
-The OAuth2 token will expire if it isn’t used for 5–7 days.
-So when you get a weird terminal error saying token expired just delete the youtube_token.pickle file and retry 🔄
-
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License 📝
