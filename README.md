@@ -94,7 +94,7 @@ The CSV should have the following structure:
 
 Only publicly searchable songs on YouTube are added 🔍
 
-Respect YouTube API limits (~60–70 songs per run with free quota) ⏱️
+Because of the Googles selfish quota policy you can only add ~60–70 songs per run with free quota but your quota will reset daily⏱️
 
 OAuth token expires if unused for 5–7 days; delete youtube_token.pickle if needed 🔄
 
