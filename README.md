@@ -2,6 +2,8 @@
 
 YouTube Playlist CSV Importer is a Python desktop app with a simple GUI that lets you import songs from a CSV file directly into a YouTube playlist. Perfect for transferring playlists from Spotify or other sources to YouTube! 📄➡️🎶➡️📺
 
+### CSV files from the [Spotify Playlist to CSV](https://github.com/OmurEKiraz/SpotifyPlaylistToCSV) exporter would work fine
+
 ## 🚀 Features
 
 Enter YouTube Playlist ID directly 🎯
