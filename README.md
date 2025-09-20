@@ -2,7 +2,7 @@
 
 csvlistmaker.py is a Python utility that reads a CSV file containing tracks and artists, tracks existing videos in a YouTube playlist, and prepares the playlist for importing new songs. This tool is ideal for transferring playlists from Spotify or other sources to YouTube. 🎵➡️📺
 
-### CSV files from the [Spotify Playlist to CSV exporter](https://github.com/OmurEKiraz/SpotifyPlaylistToCSV) would work fine
+### CSV files from the [SpotifyPlaylisttoCSV] exporter(https://github.com/OmurEKiraz/SpotifyPlaylistToCSV) would work fine
 
 ## 🚀 Features
 
