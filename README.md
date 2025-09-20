@@ -105,4 +105,4 @@ App remembers your last-used playlist, CSV, and client secret paths automaticall
 This project is licensed under the MIT License 📝
 
 ## Screenshots
-<img width="1149" height="916" alt="csvlistmakerui" src="https://github.com/user-attachments/assets/6a076678-4074-4d21-a05e-cb72d73f1d4f" />
+<img width="1000" height="916" alt="csvlistmakerui" src="https://github.com/user-attachments/assets/6a076678-4074-4d21-a05e-cb72d73f1d4f" />
