@@ -84,9 +84,9 @@ Failed or skipped songs are logged for review 📄
 
 The CSV should have the following structure:
 
-Track Name,Artists
-Song Example 1,Artist 1
-Song Example 2,Artist 2
+#### Track Name,Artists
+#### Song Example 1,Artist 1
+#### Song Example 2,Artist 2
 
 ## 📌 Notes
 
