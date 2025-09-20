@@ -78,7 +78,7 @@ Logs any failed or skipped songs in failed_or_skipped.csv 📋
 
 Saves remaining songs for subsequent runs in remaining_songs.pickle 💾
 
-Because of the google APIs free quota limit you can add maximum of 60 to 70 song in one run for free
+Because of the google APIs free quota limit you can add maximum of 60 to 70 songs in one run for free
 
 ## 📂 CSV Format
 
