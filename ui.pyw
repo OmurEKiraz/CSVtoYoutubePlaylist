@@ -32,7 +32,6 @@ from csvlistmaker import import_csv_to_youtube
 
 SETTINGS_FILE = "ui_settings.json"
 
-
 # ------------------------------
 # Main App
 # ------------------------------
@@ -122,6 +121,11 @@ class YouTubeCSVImporter(ctk.CTk):
         self.log_output.grid(row=9, column=0, sticky="nsew", padx=20, pady=(0, 20))
         self.log_output.configure(state="disabled")
 
+        # Renk tagleri bir kez tanımlandı
+        self.log_output.tag_configure("info", foreground="white")
+        self.log_output.tag_configure("error", foreground="red")
+        self.log_output.tag_configure("success", foreground="lime")
+
         # Load saved settings
         self.load_settings()
 
@@ -168,10 +172,12 @@ class YouTubeCSVImporter(ctk.CTk):
     # ------------------------------
     def log(self, message, error=False):
         self.log_output.configure(state="normal")
-        color = "red" if error else "white"
-        self.log_output.insert("end", message + "\n", color)
-        self.log_output.tag_configure("red", foreground="red")
-        self.log_output.tag_configure("white", foreground="white")
+        if error:
+            self.log_output.insert("end", message + "\n", "error")
+        elif "success" in message.lower():
+            self.log_output.insert("end", message + "\n", "success")
+        else:
+            self.log_output.insert("end", message + "\n", "info")
         self.log_output.see("end")
         self.log_output.configure(state="disabled")
 
@@ -186,7 +192,8 @@ class YouTubeCSVImporter(ctk.CTk):
                                        "google-api-python-client",
                                        "google-auth-httplib2",
                                        "google-auth-oauthlib",
-                                       "pandas"])
+                                       "pandas",
+                                       "customtkinter"])
                 self.log("Dependencies installed successfully!")
             except Exception as e:
                 self.log(f"Error installing dependencies: {e}", error=True)
