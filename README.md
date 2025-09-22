@@ -57,14 +57,13 @@ Click Create, then Download JSON.
 
 Save this file as client_secrets.json somewhere accessible and use the Select Client Secret button in the app to load it.
 
-⚠️ Keep your client_secrets.json safe and do not share it publicly.
+#### ⚠️ Keep your client_secrets.json safe and do not share it publicly.
 
 ## ⚙️ How to Use
 
-
 Double Click the ui.pyw file
 
-It installs all packages at first so it takes a while (~10-30 seconds)
+It installs all packages at first time so it takes a while (~10-30 seconds)
 
 In the app window:
 
